@@ -17,9 +17,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin({ verbose: true }),
-        new HtmlWebpackPlugin({
-            title: 'Development'
-        })
+        new HtmlWebpackPlugin({ title: 'Development' })
     ],
     output: {
         filename: 'bundle.js',
@@ -29,39 +27,28 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
+                use: ['style-loader','css-loader']
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader'
-                ]
+                use: ['file-loader']
             },
             {
                 test: /\.ttf$/,
-                use: [
-                    {
+                use: [{
                         loader: 'ttf-loader',
                         options: {
                             name: './font/[hash].[ext]',
                         },
-                    },
-                ]
+                    }]
             },
             {
                 test: /\.(csv|tsv)$/,
-                use: [
-                    'csv-loader'
-                ]
+                use: ['csv-loader']
             },
             {
                 test: /\.xml$/,
-                use: [
-                    'xml-loader'
-                ]
+                use: ['xml-loader']
             },
             {
                 test: /\.m?js$/,
