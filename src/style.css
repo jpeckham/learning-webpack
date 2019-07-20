@@ -1,0 +1,11 @@
+ @font-face {
+    font-family: 'IndieFlower-Regular';
+    src:  url('./IndieFlower-Regular.ttf') format('IndieFlower-Regular');
+    font-weight: 600;
+    font-style: normal;
+}
+.hello {
+    color: red;
+    font-family: 'Indie Flower', cursive;
+    background: url('./icon.png');
+  }
